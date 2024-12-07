@@ -31,7 +31,10 @@ app.use(cors(corsOptions));
 const PORT = process.env.PORT || 3000;
 
 // API collection ..
-app.use("/api/v1/users", userRoute);
+app.use("/api/v1/user", userRoute);
+// "http://localhost:8000/api/v1/user/register"
+// "http://localhost:8000/api/v1/user/login"
+// "http://localhost:8000/api/v1/user/profile/update"
 
 app.listen(PORT, () => {
     connectDB();
